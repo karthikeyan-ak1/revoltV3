@@ -1,0 +1,156 @@
+@use '@/styles' as *;
+
+$cream: #f0ebe3;
+
+.section {
+  background: $cream;
+  padding: 8rem 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  overflow: hidden;
+}
+
+// ─── Logo strip ────────────────────────────────────────────────────────────────
+
+.logoStrip {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+  animation: marquee 24s linear infinite;
+  width: max-content;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.logo {
+  height: 2.8rem;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.75;
+  flex-shrink: 0;
+}
+
+// ─── Stats grid ────────────────────────────────────────────────────────────────
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  max-width: 128rem;
+  margin: 0 auto;
+  width: 100%;
+}
+
+// Left large card
+.heroCard {
+  position: relative;
+  border-radius: 1.2rem;
+  overflow: hidden;
+  min-height: 48rem;
+  background: #1a1a1a;
+}
+
+.devImg {
+  object-fit: cover;
+  object-position: center;
+}
+
+.heroCardContent {
+  position: absolute;
+  inset: 0;
+  padding: 3.2rem;
+  display: flex;
+  align-items: flex-end;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 30%, transparent 70%);
+}
+
+.heroCardText {
+  font-family: $font-serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 1.25;
+  color: $white;
+
+  em {
+    font-style: italic;
+  }
+}
+
+// Right column
+.statsColumn {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 1.2rem;
+}
+
+// Stat cards shared
+.statCard {
+  border-radius: 1.2rem;
+  padding: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.2rem;
+}
+
+.statValue {
+  font-family: $font-serif;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.statLabel {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+// Variants
+.warm {
+  background: linear-gradient(135deg, #7a4e2d 0%, #c4864a 100%);
+  color: $white;
+}
+
+.lavender {
+  background: #c8c5e8;
+  color: #1a1a1a;
+}
+
+.dark {
+  background: #1a1a1a;
+  color: $white;
+}
+
+// ─── Responsive ────────────────────────────────────────────────────────────────
+
+@include mobile {
+  .section {
+    padding: 6rem 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroCard {
+    min-height: 36rem;
+  }
+
+  .heroCardText {
+    font-size: 2.4rem;
+  }
+
+  .statValue {
+    font-size: 4.8rem;
+  }
+}

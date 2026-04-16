@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import navbarLogo from '@/assets/navbarLogo.webp'
 import { Routes } from '@/constants/routes'
 import { BOOK_DEMO_LABEL, GET_STARTED_LABEL, LOGO_ALT, NAV_LINKS } from './constants'
 import styles from './Navbar.module.scss'
@@ -10,7 +9,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href={Routes.Home} className={styles.logo}>
-          <Image src={navbarLogo} alt={LOGO_ALT} height={20} />
+          <Image src="/assets/logos/navbarLogo.webp" alt={LOGO_ALT} height={20} width={120} />
         </Link>
 
         <ul className={styles.links}>

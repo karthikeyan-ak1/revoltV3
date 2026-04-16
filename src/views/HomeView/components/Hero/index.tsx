@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { HERO_CTA_HREF, HERO_CTA_LABEL, HERO_HEADING, HERO_SUBHEADING } from './constants'
-import heroImg from '@/assets/homeHero.webp'
 import styles from './Hero.module.scss'
 import Image from 'next/image'
 
@@ -14,7 +13,13 @@ export default function Hero() {
           {HERO_CTA_LABEL}
         </Link>
       </div>
-      <Image width={1100} height={650} src={heroImg} alt="" className={styles.img} />
+      <Image
+        width={1100}
+        height={650}
+        src="/assets/images/homeHero.webp"
+        alt=""
+        className={styles.img}
+      />
     </section>
   )
 }
