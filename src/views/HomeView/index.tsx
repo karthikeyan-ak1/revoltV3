@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Hero from './components/Hero'
+import HowItWorks from './components/HowItWorks'
 import SocialProof from './components/SocialProof'
 import styles from './HomeView.module.scss'
 
@@ -11,6 +12,7 @@ export default function HomeView() {
         <Hero />
       </div>
       <SocialProof />
+      <HowItWorks />
     </main>
   )
 }
