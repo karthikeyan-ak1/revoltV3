@@ -1,9 +1,70 @@
-// Add @font-face declarations here
-// Example:
-// @font-face {
-//   font-family: 'FontName';
-//   src: url('/fonts/FontName.otf') format('opentype');
-//   font-weight: 400;
-//   font-style: normal;
-//   font-display: swap;
-// }
+// ─── Poppins ───────────────────────────────────────────────────────────────────
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('/fonts/Poppins/Poppins-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+// ─── Baskervville ──────────────────────────────────────────────────────────────
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/Baskervville/Baskervville-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Baskervville';
+  src: url('/fonts/Baskervville/Baskervville-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+// ─── Neue Regrade ──────────────────────────────────────────────────────────────
+
+@font-face {
+  font-family: 'Neue Regrade';
+  src: url('/fonts/neue-regrade-font-family (1)/Neue-Regrade-Variable-BF65af35d87b6a7.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}

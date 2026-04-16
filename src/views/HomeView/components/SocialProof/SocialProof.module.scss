@@ -1,24 +1,30 @@
 @use '@/styles' as *;
 
-$cream: #f0ebe3;
-
 .section {
   background: $cream;
-  padding: 8rem 4rem;
+  padding: 8rem 12rem;
   display: flex;
   flex-direction: column;
   gap: 6rem;
   overflow: hidden;
 }
 
-// ─── Logo strip ────────────────────────────────────────────────────────────────
+.marqueeWrapper {
+  overflow: hidden;
+  width: calc(100% + 8rem);
+  margin-left: -20rem;
+}
 
-.logoStrip {
+.marqueeTrack {
   display: flex;
   align-items: center;
   gap: 6rem;
-  animation: marquee 24s linear infinite;
   width: max-content;
+  animation: marquee 24s linear infinite;
+
+  &:hover {
+    animation-play-state: paused;
+  }
 }
 
 @keyframes marquee {
@@ -34,11 +40,8 @@ $cream: #f0ebe3;
   height: 2.8rem;
   width: auto;
   object-fit: contain;
-  opacity: 0.75;
   flex-shrink: 0;
 }
-
-// ─── Stats grid ────────────────────────────────────────────────────────────────
 
 .grid {
   display: grid;
@@ -49,18 +52,19 @@ $cream: #f0ebe3;
   width: 100%;
 }
 
-// Left large card
 .heroCard {
   position: relative;
   border-radius: 1.2rem;
-  overflow: hidden;
   min-height: 48rem;
-  background: #1a1a1a;
+  width: 57rem;
+  background-color: $charcoal;
 }
 
 .devImg {
-  object-fit: cover;
-  object-position: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateX(-3rem);
 }
 
 .heroCardContent {
@@ -68,70 +72,107 @@ $cream: #f0ebe3;
   inset: 0;
   padding: 3.2rem;
   display: flex;
-  align-items: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 30%, transparent 70%);
+  align-items: flex-start;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 0%, transparent 50%);
 }
 
 .heroCardText {
-  font-family: $font-serif;
+  font-family: $font-regrade;
   font-size: 3.2rem;
   font-weight: 400;
-  line-height: 1.25;
+  line-height: 1.2;
+  max-width: 32rem;
   color: $white;
 
   em {
+    font-family: $font-serif;
     font-style: italic;
   }
 }
 
-// Right column
 .statsColumn {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
   gap: 1.2rem;
 }
 
-// Stat cards shared
 .statCard {
+  &:first-child {
+    grid-column: 1 / -1;
+  }
+  position: relative;
   border-radius: 1.2rem;
-  padding: 3.2rem;
+  padding: 2.7rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: end;
   gap: 1.2rem;
+  overflow: hidden;
 }
 
 .statValue {
-  font-family: $font-serif;
-  font-size: 6rem;
+  position: relative;
+  z-index: 1;
+  font-family: $font-regrade;
+  font-size: 9rem;
   font-weight: 400;
   line-height: 1;
   letter-spacing: -0.02em;
 }
 
 .statLabel {
-  font-size: 1.6rem;
-  font-weight: 400;
-  line-height: 1.4;
+  font-family: $font-sans;
+  position: relative;
+  z-index: 1;
+  color: $white;
+  font-size: 2.4rem;
+  font-weight: 300;
 }
 
-// Variants
 .warm {
-  background: linear-gradient(135deg, #7a4e2d 0%, #c4864a 100%);
+  background-image: var(--stat-bg);
+  background-size: cover;
+  background-position: center;
   color: $white;
 }
 
 .lavender {
-  background: #c8c5e8;
-  color: #1a1a1a;
+  background: $lavender;
+  color: $charcoal;
 }
 
 .dark {
-  background: #1a1a1a;
+  background: $charcoal;
   color: $white;
 }
 
-// ─── Responsive ────────────────────────────────────────────────────────────────
+.fasterTestingValue {
+  font-size: 5rem;
+  font-family: $font-regrade;
+}
+
+.fasterTestingLabel {
+  font-family: $font-sans;
+  font-size: 1.6rem;
+  color: $black15;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+.reductionIncidentsValue {
+  font-size: 5rem;
+  font-family: $font-regrade;
+}
+
+.reductionIncidentsLabel {
+  font-family: $font-sans;
+  font-size: 1.6rem;
+  max-width: 18rem;
+  color: $white;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
 
 @include mobile {
   .section {
@@ -148,6 +189,10 @@ $cream: #f0ebe3;
 
   .heroCardText {
     font-size: 2.4rem;
+  }
+
+  .statsColumn {
+    grid-template-columns: 1fr;
   }
 
   .statValue {
