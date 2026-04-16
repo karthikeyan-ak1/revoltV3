@@ -9,40 +9,6 @@
   overflow: hidden;
 }
 
-.marqueeWrapper {
-  overflow: hidden;
-  width: calc(100% + 8rem);
-  margin-left: -20rem;
-}
-
-.marqueeTrack {
-  display: flex;
-  align-items: center;
-  gap: 6rem;
-  width: max-content;
-  animation: marquee 24s linear infinite;
-
-  &:hover {
-    animation-play-state: paused;
-  }
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-.logo {
-  height: 2.8rem;
-  width: auto;
-  object-fit: contain;
-  flex-shrink: 0;
-}
-
 .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -54,9 +20,8 @@
 
 .heroCard {
   position: relative;
-  border-radius: 1.2rem;
-  min-height: 48rem;
-  width: 57rem;
+  min-height: 60rem;
+  width: 56rem;
   background-color: $charcoal;
 }
 
@@ -102,7 +67,7 @@
     grid-column: 1 / -1;
   }
   position: relative;
-  border-radius: 1.2rem;
+  border-radius: 0.6rem;
   padding: 2.7rem;
   display: flex;
   flex-direction: column;
@@ -143,7 +108,7 @@
 }
 
 .dark {
-  background: $charcoal;
+  background: $black;
   color: $white;
 }
 
@@ -154,7 +119,7 @@
 
 .fasterTestingLabel {
   font-family: $font-sans;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   color: $black15;
   line-height: 2.5rem;
   font-weight: 400;
@@ -167,7 +132,7 @@
 
 .reductionIncidentsLabel {
   font-family: $font-sans;
-  font-size: 1.6rem;
+  font-size: 1.75rem;
   max-width: 18rem;
   color: $white;
   line-height: 2.5rem;

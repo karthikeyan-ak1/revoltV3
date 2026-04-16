@@ -1,24 +1,12 @@
 import Image from 'next/image'
+import LogoMarquee from '@/shared/components/LogoMarquee'
 import { LOGOS, SOCIAL_PROOF_HEADING, SOCIAL_PROOF_HEADING_EM, STATS } from './constants'
 import styles from './SocialProof.module.scss'
 
 export default function SocialProof() {
   return (
     <section className={styles.section}>
-      <div className={styles.marqueeWrapper}>
-        <div className={styles.marqueeTrack}>
-          {[...LOGOS, ...LOGOS].map((logo, i) => (
-            <Image
-              key={i}
-              src={`/assets/logos/${logo.file}.webp`}
-              alt={logo.name}
-              height={28}
-              width={120}
-              className={styles.logo}
-            />
-          ))}
-        </div>
-      </div>
+      <LogoMarquee logos={LOGOS} />
 
       <div className={styles.grid}>
         <div className={styles.heroCard}>

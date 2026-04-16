@@ -17,24 +17,6 @@
   text-align: center;
 }
 
-.label {
-  font-family: $font-mono;
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-transform: uppercase;
-  color: $white60;
-  position: relative;
-}
-
-.dot {
-  position: absolute;
-  left: -1.5rem;
-  bottom: 0.5rem;
-  color: $warm-light;
-  height: 0.8rem;
-  width: 0.8rem;
-}
-
 .heading {
   font-family: $font-regrade;
   font-size: 4rem;

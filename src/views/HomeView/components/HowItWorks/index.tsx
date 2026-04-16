@@ -1,3 +1,5 @@
+import SectionLabel from '@/shared/components/SectionLabel'
+import { Color } from '@/shared/constants/colors'
 import {
   HOW_IT_WORKS_DESCRIPTION,
   HOW_IT_WORKS_HEADING,
@@ -11,10 +13,7 @@ export default function HowItWorks() {
   return (
     <section className={styles.section}>
       <div className={styles.header}>
-        <p className={styles.label}>
-          <span className={styles.dot}>■</span>
-          <span className={styles.labelText}>{HOW_IT_WORKS_LABEL}</span>
-        </p>
+        <SectionLabel label={HOW_IT_WORKS_LABEL} dotColor={Color.WARM_LIGHT} />
         <h2 className={styles.heading}>
           {HOW_IT_WORKS_HEADING} <em>{HOW_IT_WORKS_HEADING_EM}</em> {HOW_IT_WORKS_HEADING_SUFFIX}
         </h2>
