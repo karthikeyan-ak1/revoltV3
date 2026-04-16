@@ -1,0 +1,76 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 4rem 8rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.4rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  list-style: none;
+  flex: 1;
+  justify-content: center;
+}
+
+.link {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: $white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 0.6rem;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $white75;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-shrink: 0;
+}
+
+.demo {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $white;
+  padding: 0.8rem 1.4rem;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $white75;
+  }
+}
+
+.cta {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: $black;
+  background: $white;
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.321rem;
+  transition: opacity 0.15s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
