@@ -5,6 +5,15 @@
   right: 0;
   z-index: 100;
   padding: 4rem 8rem;
+  transition:
+    background 0.3s ease,
+    backdrop-filter 0.3s ease;
+}
+
+.scrolled {
+  background: rgba(18, 16, 13, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
 .nav {

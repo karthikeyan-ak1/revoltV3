@@ -41,8 +41,6 @@
   padding-top: 0.6rem;
 }
 
-// ─── Cards ─────────────────────────────────────────────────────────────────────
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -97,8 +95,6 @@
   line-height: 23px;
   color: $black60;
 }
-
-// ─── Responsive ────────────────────────────────────────────────────────────────
 
 @include mobile {
   .section {

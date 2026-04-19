@@ -1,0 +1,332 @@
+@use '@/styles' as *;
+
+$ink-blue: #23003f;
+$light-gray: rgba(0, 0, 0, 0.3);
+$bg: #fef6ef;
+
+.outer {
+  background: $bg;
+}
+
+.inner {
+  height: 100%;
+  display: flex;
+  gap: 64px;
+  align-items: center;
+  padding: 32px 80px 0 80px;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.ctaLink {
+  margin-top: 3rem;
+  font-family: $font-serif;
+  color: $ink-blue;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  position: relative;
+  width: fit-content;
+
+  &:hover {
+    cursor: pointer;
+
+    .arrow {
+      transform: translateX(4px);
+    }
+  }
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+
+.left {
+  width: 480px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 880px;
+  overflow: hidden;
+}
+
+.featureList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  min-height: 624px;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+  border-bottom: 1px solid $light-gray;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.featureItemActive {
+  opacity: 1;
+  border-bottom: none;
+}
+
+.featureRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.featureTitle {
+  font-family: $font-regrade;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 57px;
+  transition: color 0.3s ease;
+}
+
+.featureMeta {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition:
+    grid-template-rows 0.4s ease,
+    opacity 0.4s ease;
+
+  & > * {
+    overflow: hidden;
+  }
+
+  .featureItemActive & {
+    grid-template-rows: 1fr;
+    opacity: 1;
+  }
+}
+
+.featureMetaInner {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  overflow: hidden;
+}
+
+.featureDesc {
+  font-family: $font-sans;
+  font-size: 1.5rem;
+  line-height: 24px;
+  color: $black15;
+}
+
+.progressTrack {
+  height: 2px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background-color: $charcoal;
+  border-radius: 2px;
+}
+
+.right {
+  border-radius: 18px;
+  position: relative;
+  width: 662px;
+  height: 752px;
+  overflow: hidden;
+  flex-shrink: 0;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.imageSlot {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.imageHidden {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.videoPlayer,
+.coverImage {
+  padding: 32px;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.imageEnter {
+  animation: enterSlide 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  z-index: 2;
+}
+
+.imageExitLeft {
+  animation: exitLeft 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  z-index: 1;
+}
+
+.imageExitRight {
+  animation: exitRight 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  z-index: 1;
+}
+
+@keyframes enterSlide {
+  from {
+    transform: translateX(60px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes exitLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    transform: translateX(-60px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+@keyframes exitRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+  to {
+    transform: translateX(60px);
+    opacity: 0;
+    filter: blur(8px);
+  }
+}
+
+.mobileWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobileWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-top: 48px;
+    padding: 32px 24px;
+    padding-top: 48px;
+  }
+
+  .mobileContent {
+    position: relative;
+    min-height: 208px;
+  }
+
+  .mobileHeader {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .title {
+    font-family: $font-regrade;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 57px;
+  }
+
+  .mobileDesc {
+    font-family: $font-sans;
+    font-size: 1.5rem;
+    line-height: 24px;
+    color: $black15;
+    margin: 0;
+    padding-top: 16px;
+  }
+
+  .mobileMedia {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    border-radius: 20px;
+    overflow: hidden;
+    background: $charcoal;
+  }
+
+  .mobileImage {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 20px;
+    position: absolute;
+  }
+
+  .mobileBars {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  .mobileBarTrack {
+    flex: 1;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .mobileBar {
+    height: 100%;
+    background: $charcoal;
+    border-radius: 2px;
+    will-change: transform;
+    transform-origin: left;
+    transition: transform 0.1s linear;
+  }
+
+  .mobileCTA {
+    margin-top: 3rem;
+    font-family: $font-serif;
+    color: $ink-blue;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    width: fit-content;
+    cursor: pointer;
+    margin-top: 8px;
+    border-bottom: 1px solid $charcoal;
+
+    &:hover .arrow {
+      transform: translateX(4px);
+    }
+  }
+}
