@@ -20,7 +20,7 @@ export const USE_CASES = [
         <em>Workflows</em> from the start.
       </>
     ),
-    bg: '/assets/images/useCaseBg1.webp',
+    bg: '/images/useCaseBg1.webp',
   },
   {
     titlePrefix: 'Migrate',
@@ -32,7 +32,7 @@ export const USE_CASES = [
         workflows across existing codebases.
       </>
     ),
-    bg: '/assets/images/useCaseBg2.webp',
+    bg: '/images/useCaseBg2.webp',
   },
   {
     titlePrefix: 'Operate',
@@ -44,7 +44,7 @@ export const USE_CASES = [
         maintain delivery workflows.
       </>
     ),
-    bg: '/assets/images/useCaseBg3.webp',
+    bg: '/images/useCaseBg3.webp',
   },
   {
     titlePrefix: 'Evolve',
@@ -56,6 +56,6 @@ export const USE_CASES = [
         engineers focus on product decisions.
       </>
     ),
-    bg: '/assets/images/useCaseBg4.webp',
+    bg: '/images/useCaseBg4.webp',
   },
 ]

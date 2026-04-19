@@ -9,7 +9,7 @@ export default function Navbar() {
     <header className={styles.header}>
       <nav className={styles.nav}>
         <Link href={Routes.Home} className={styles.logo}>
-          <Image src="/assets/logos/navbarLogo.webp" alt={LOGO_ALT} height={20} width={120} />
+          <Image src="/images/navbarLogo.webp" alt={LOGO_ALT} height={20} width={120} />
         </Link>
 
         <ul className={styles.links}>

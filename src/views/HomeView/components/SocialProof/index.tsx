@@ -10,7 +10,7 @@ export default function SocialProof() {
 
       <div className={styles.grid}>
         <div className={styles.heroCard}>
-          <Image src="/assets/images/revolteGirl.webp" alt="" fill className={styles.devImg} />
+          <Image src="/images/revolteGirl.webp" alt="" fill className={styles.devImg} />
           <div className={styles.heroCardContent}>
             <p className={styles.heroCardText}>
               {SOCIAL_PROOF_HEADING} <em>{SOCIAL_PROOF_HEADING_EM}</em>

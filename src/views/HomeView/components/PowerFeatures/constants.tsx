@@ -11,7 +11,8 @@ export const POWER_FEATURES = [
     titleLink: true,
     description:
       'Revolte handles the full software delivery lifecycle: development, testing, deployment, and runtime operations, not just coding tasks.',
-    bg: '#e8e5f9',
+    bg: '#DBD5FB',
+    image: '/images/powerBg1.png',
   },
   {
     id: 'harness',
@@ -19,7 +20,8 @@ export const POWER_FEATURES = [
     titleLink: false,
     description:
       'Effective workflow orchestration and harness engineering with efficient memory management.',
-    bg: '#f2f2f2',
+    bg: '#EBF7EC',
+    image: '/images/powerBg2.png',
   },
   {
     id: 'intelligence',
@@ -27,6 +29,7 @@ export const POWER_FEATURES = [
     titleLink: false,
     description:
       'Engineers define intent and govern outcomes while Revolte executes the heavy lifting of software delivery.',
-    bg: '#f0e6d5',
+    bg: '#EDDDC0',
+    image: '/images/powerBg3.png',
   },
 ]

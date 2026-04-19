@@ -18,7 +18,7 @@ export default function LogoMarquee({ logos, speed = 24 }: LogoMarqueeProps) {
         {[...logos, ...logos].map((logo, i) => (
           <Image
             key={i}
-            src={`/assets/logos/${logo.file}.webp`}
+            src={`/images/${logo.file}.webp`}
             alt={logo.name}
             height={28}
             width={120}

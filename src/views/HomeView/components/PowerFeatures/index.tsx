@@ -21,15 +21,10 @@ export default function PowerFeatures() {
       </div>
 
       <div className={styles.grid}>
-        {POWER_FEATURES.map(({ id, title, titleLink, description, bg }) => (
+        {POWER_FEATURES.map(({ id, title, titleLink, description, bg, image }) => (
           <div key={id} className={styles.card}>
             <div className={styles.cardIllustration} style={{ backgroundColor: bg }}>
-              <Image
-                src={`/assets/images/powerFeature_${id}.webp`}
-                alt={title}
-                fill
-                className={styles.cardImage}
-              />
+              <Image src={image} alt={title} fill className={styles.cardImage} />
             </div>
             <div className={styles.cardContent}>
               <h3 className={styles.cardTitle}>

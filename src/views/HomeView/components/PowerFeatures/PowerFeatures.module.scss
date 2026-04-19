@@ -52,7 +52,7 @@
 .card {
   display: flex;
   flex-direction: column;
-
+  width: 100%;
   &:hover .cardTitle {
     text-decoration: underline;
     cursor: pointer;
@@ -61,7 +61,7 @@
 
 .cardIllustration {
   position: relative;
-  min-height: 28rem;
+  height: 39rem;
   border-radius: 1.6rem;
   overflow: hidden;
 }

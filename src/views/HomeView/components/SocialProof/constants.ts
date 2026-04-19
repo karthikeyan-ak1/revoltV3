@@ -14,7 +14,7 @@ export const STATS = [
     value: '10X',
     label: 'Faster Release Cycles',
     variant: StatVariant.Warm,
-    bg: '/assets/images/releaseBg.webp',
+    bg: '/images/releaseBg.webp',
   },
   {
     value: '85%',

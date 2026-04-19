@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Hero from './components/Hero'
 import HowItWorks from './components/HowItWorks'
+import Integrations from './components/Integrations'
 import PowerFeatures from './components/PowerFeatures'
 import SocialProof from './components/SocialProof'
 import UseCases from './components/UseCases'
@@ -10,13 +11,14 @@ export default function HomeView() {
   return (
     <main className={styles.main}>
       <div className={styles.heroWrapper}>
-        <Image src="/assets/images/homeBg.webp" alt="" fill priority className={styles.bg} />
+        <Image src="/images/homeBg.webp" alt="" fill priority className={styles.bg} />
         <Hero />
       </div>
       <SocialProof />
       <HowItWorks />
       <UseCases />
       <PowerFeatures />
+      <Integrations />
     </main>
   )
 }

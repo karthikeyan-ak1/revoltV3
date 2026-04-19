@@ -13,13 +13,7 @@ export default function Hero() {
           {HERO_CTA_LABEL}
         </Link>
       </div>
-      <Image
-        width={1100}
-        height={650}
-        src="/assets/images/homeHero.webp"
-        alt=""
-        className={styles.img}
-      />
+      <Image width={1100} height={650} src="/images/homeHero.webp" alt="" className={styles.img} />
     </section>
   )
 }
