@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import SectionLabel from '@/shared/components/SectionLabel'
 import { Color } from '@/shared/constants/colors'
 import {
@@ -19,6 +20,13 @@ export default function HowItWorks() {
         </h2>
         <p className={styles.description}>{HOW_IT_WORKS_DESCRIPTION}</p>
       </div>
+      <Image
+        src="/images/codeGeneration.png"
+        alt="Code generation workflow"
+        width={1200}
+        height={600}
+        className={styles.image}
+      />
     </section>
   )
 }

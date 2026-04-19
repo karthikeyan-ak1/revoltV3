@@ -40,6 +40,12 @@
   margin-top: -2rem;
 }
 
+.image {
+  margin-left: 10rem;
+  height: auto;
+  border-radius: 1.2rem;
+}
+
 @include mobile {
   .section {
     padding: 8rem 2rem;
