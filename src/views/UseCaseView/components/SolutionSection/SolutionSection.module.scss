@@ -1,0 +1,46 @@
+@use '../../../../styles/variables' as *;
+
+.section {
+  padding: 10rem 8rem;
+  background-color: $black;
+
+  @media (max-width: $mobile-width) {
+    padding: 6.4rem 3rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5.6rem;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 3.2rem;
+  }
+}
+
+.headline {
+  margin: 3rem 0 2rem;
+  color: $white;
+  font-family: 'Neue Regrade';
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+    max-width: 25rem;
+  }
+}
+
+.headlineItalic {
+  font-style: italic;
+  font-family: 'Baskerville';
+}
+
+.panels {
+  width: 100%;
+}

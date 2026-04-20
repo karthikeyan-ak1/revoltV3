@@ -1,0 +1,118 @@
+@use '../../../../styles/variables' as *;
+
+.persona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10rem 0 8rem 0;
+  background-color: $cream-light;
+
+  @media (max-width: $mobile-width) {
+    padding: 7rem 2rem;
+  }
+}
+
+.content {
+  display: flex;
+  gap: 6rem;
+  width: 100%;
+  padding: 18rem 8rem 10rem;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 3rem 0;
+  }
+}
+
+.textCol {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3rem;
+  height: 50rem;
+
+  @media (max-width: $mobile-width) {
+    align-items: center;
+  }
+}
+
+.headline {
+  max-width: 42rem;
+  color: $black;
+  font-family: 'Neue Regrade';
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 5rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    text-align: center;
+  }
+}
+
+.headlineItalic {
+  font-style: italic;
+  font-family: 'Baskerville';
+}
+
+.description {
+  max-width: 48rem;
+  font-family: 'Poppins';
+  font-size: 1.8rem;
+  line-height: 2.4rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.cta {
+  margin-top: auto;
+  font-family: 'Open Sauce Sans';
+  font-size: 2rem;
+  font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: $mobile-width) {
+    align-self: center;
+    font-size: 1.2rem;
+  }
+}
+
+.carouselCol {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 4rem;
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+.carouselTrack {
+  position: relative;
+  width: 100%;
+  height: 48rem;
+
+  @media (max-width: $mobile-width) {
+    height: 35rem;
+  }
+}
+
+.dotsRow {
+  display: flex;
+  justify-content: center;
+}

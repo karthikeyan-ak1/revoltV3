@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Navbar from '@/shared/components/Navbar'
 import '@fontsource/open-sauce-sans'
 import '@/styles/globals.scss'
+import Footer from '@/shared/components/Footer'
 
 export const metadata: Metadata = {
   title: 'Revolte',
@@ -26,6 +27,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   )

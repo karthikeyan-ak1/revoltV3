@@ -1,0 +1,72 @@
+@use '../../../../styles/variables' as *;
+
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  padding-top: 18rem;
+}
+
+.bgImage {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  img {
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.bgImageDesktop {
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.bgImageMobile {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 2rem;
+  }
+}
+
+.headline {
+  max-width: 70rem;
+  color: $white;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 4.8rem;
+}
+
+.description {
+  max-width: 70rem;
+  margin: 1rem 0 3rem;
+  color: $white;
+  opacity: 0.5;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @media (max-width: $mobile-width) {
+    max-width: 28rem;
+    margin: 2rem 0 5rem;
+    opacity: 1;
+  }
+}

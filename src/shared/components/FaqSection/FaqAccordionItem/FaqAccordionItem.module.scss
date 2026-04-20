@@ -1,0 +1,80 @@
+@use '../../../../styles/variables' as *;
+
+.item {
+  display: flex;
+  flex-direction: column;
+}
+
+.trigger {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid $black20;
+    outline-offset: 2px;
+    border-radius: 0.2rem;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 1.5rem 0 1rem 0;
+  }
+}
+
+.question {
+  font-family: 'Hedvig Letters Serif';
+  font-size: 2.4rem;
+  font-weight: 400;
+  line-height: 1.4;
+  transition: opacity 0.2s ease;
+
+  .trigger:hover & {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.4rem;
+  }
+}
+
+.answerWrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s ease;
+
+  .itemOpen & {
+    grid-template-rows: 1fr;
+  }
+}
+
+.answerInner {
+  overflow: hidden;
+}
+
+.answer {
+  margin: 0 0 3rem;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 1px;
+  margin: 1.5rem 0;
+  background: $black20;
+
+  @media (max-width: $mobile-width) {
+    margin: 1rem 0;
+  }
+}

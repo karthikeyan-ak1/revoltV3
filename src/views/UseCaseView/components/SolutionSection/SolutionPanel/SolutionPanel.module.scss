@@ -1,0 +1,169 @@
+@use '../../../../../styles/variables' as *;
+
+.panel {
+  display: none;
+  gap: 10rem;
+  padding: 5.6rem 0;
+
+  &.panelActive {
+    display: flex;
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 3.2rem;
+    padding: 3.2rem 0 0;
+
+    &.panelActive {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.preview {
+  position: relative;
+  order: 2;
+  width: 70.3rem;
+  height: 71.5rem;
+  border-radius: 10px;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+
+  @media (max-width: $mobile-width) {
+    order: 1;
+    width: 34.2rem;
+    height: 35.6rem;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  order: 1;
+  padding-top: 5rem;
+
+  @media (max-width: $mobile-width) {
+    order: 2;
+  }
+}
+
+.subHeadline {
+  margin-bottom: 1.5rem;
+  color: $white;
+  font-family: 'Neue Regrade';
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+}
+
+.subDescription {
+  max-width: 50rem;
+  margin-bottom: 5rem;
+  color: $white-60;
+  font-family: 'Poppins';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5rem;
+  list-style: none;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 2rem;
+  }
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+
+  @media (max-width: $mobile-width) {
+    padding: 1rem 0;
+  }
+}
+
+.featureDivider {
+  height: 1px;
+  background: $graphte;
+}
+
+.featureBody {
+  padding-bottom: 4rem;
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 2rem;
+  }
+}
+
+.featureTitleRow {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+
+  @media (max-width: $mobile-width) {
+    gap: 1rem;
+
+    img {
+      height: 1.2rem;
+      width: 1.2rem;
+    }
+  }
+}
+
+.featureBullet {
+  color: $silver;
+}
+
+.featureTitle {
+  color: $white;
+  font-family: 'Neue Regrade';
+  font-size: 2rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.6rem;
+  }
+}
+
+.featureDescription {
+  margin: 0;
+  padding-left: 4rem;
+  color: $white-55;
+  font-family: 'Poppins';
+  font-size: 1.4rem;
+  line-height: 1.6;
+
+  @media (max-width: $mobile-width) {
+    max-width: 90%;
+    padding-left: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+  }
+}
+
+.cta {
+  width: fit-content;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
+}

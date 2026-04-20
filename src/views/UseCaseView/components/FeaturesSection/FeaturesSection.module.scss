@@ -1,0 +1,114 @@
+@use '../../../../styles/variables' as *;
+
+.section {
+  width: 100%;
+  padding: 10rem 8rem;
+  background-color: $cream-light;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 3rem 8rem;
+  }
+}
+
+.headline {
+  max-width: 50rem;
+  margin-bottom: 5rem;
+  font-family: 'Neue Regrade';
+  font-size: 4.8rem;
+  font-weight: 400;
+  line-height: 5rem;
+
+  @media (max-width: $mobile-width) {
+    max-width: 30rem;
+    margin-bottom: 0.8rem;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 31.4rem;
+  height: 38.6rem;
+  padding: 5rem 3.5rem 2rem 2.5rem;
+  border-radius: 6px;
+
+  @media (max-width: $mobile-width) {
+    width: 34.2rem;
+    height: 11.6rem;
+    padding: 0;
+    margin-top: 2rem;
+  }
+}
+
+.cardIllustration {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.4rem;
+
+  @media (max-width: $mobile-width) {
+    img {
+      width: calc(100% / 3);
+      height: 12rem;
+    }
+  }
+}
+
+.desktopCardText {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.mobileCardText {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.cardTitle {
+  font-family: 'Neue Regrade';
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 2.8rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+}
+
+.cardDescription {
+  color: $black60;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.3rem;
+
+  @media (max-width: $mobile-width) {
+    max-width: 90%;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+  }
+}

@@ -1,16 +1,20 @@
+import { Color } from '@/shared/constants/colors'
 import styles from './SectionLabel.module.scss'
 
 interface SectionLabelProps {
   label: string
   dotColor: string
+  labelColor?: Color
 }
 
-export default function SectionLabel({ label, dotColor }: SectionLabelProps) {
+export default function SectionLabel({
+  label,
+  dotColor,
+  labelColor = Color.WHITE_60,
+}: SectionLabelProps) {
   return (
-    <p className={styles.label}>
-      <span className={styles.dot} style={{ color: dotColor }}>
-        ■
-      </span>
+    <p className={styles.label} style={{ color: labelColor }}>
+      <span className={styles.dot} style={{ backgroundColor: dotColor }} />
       <span>{label}</span>
     </p>
   )

@@ -1,0 +1,285 @@
+@use '../../../styles/variables' as *;
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  margin-top: -20rem;
+}
+
+.ctaCard {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 131.8rem;
+  height: 38rem;
+  margin: auto;
+  border-radius: 7px;
+  overflow: hidden;
+
+  @media (max-width: $mobile-width) {
+    align-items: flex-start;
+    width: 33.8rem;
+  }
+}
+
+.ctaBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ctaContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5rem;
+  max-width: 60rem;
+  margin-left: 8rem;
+
+  @media (max-width: $mobile-width) {
+    gap: 2rem;
+    margin-left: 0;
+    padding: 3rem 2.5rem;
+  }
+}
+
+.ctaHeadline {
+  font-family: 'Hedvig Letters Serif';
+  font-size: 3.84rem;
+  font-weight: 400;
+  line-height: 4.76rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.body {
+  display: flex;
+  margin: 8rem 0 3rem;
+  border-top: 0.3px solid $cream-60;
+  border-bottom: 0.3px solid $cream-60;
+  background-color: $black;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    border-top: none;
+    border-bottom: none;
+  }
+}
+
+.brand {
+  display: flex;
+  flex: 1.5;
+  flex-direction: column;
+  border-right: 0.3px solid $cream-60;
+
+  @media (max-width: $mobile-width) {
+    border-right: none;
+  }
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  padding: 4rem 4rem 4rem 8rem;
+  border-bottom: 0.3px solid $cream-60;
+
+  @media (max-width: $mobile-width) {
+    padding: 2rem 4rem 4rem;
+    border-bottom: none;
+
+    img {
+      height: 2rem;
+      width: 11.1rem;
+    }
+  }
+}
+
+.tagline {
+  width: 29.3rem;
+  margin: 3rem 0 2rem 8rem;
+  color: $white;
+  font-family: 'Neue Regrade';
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 5.3rem;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 4rem 3rem;
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+}
+
+.bookDemo {
+  margin: 2rem 0 4rem 8rem;
+  max-width: fit-content;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 0 2rem 4rem;
+  }
+}
+
+.legalDesktop {
+  display: flex;
+  gap: 2.4rem;
+  padding: 4rem 0 4rem 8rem;
+  border-top: 0.3px solid $cream-60;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.legalLink {
+  color: $white-55;
+  font-family: 'Neue Regrade';
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $white-88;
+  }
+}
+
+.nav {
+  display: grid;
+  flex: 3;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+    margin: 0 4rem;
+    border-top: 1px solid $white-12;
+  }
+}
+
+.navGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 15rem 4rem 0 6rem;
+  border-right: 0.3px solid $cream-60;
+
+  &:nth-child(1) {
+    border-right: none;
+  }
+
+  &:last-child {
+    border-right: none;
+    margin-left: 1rem;
+
+    .navGroupLabel {
+      margin-left: 2rem;
+
+      @media (max-width: $mobile-width) {
+        margin-left: 0;
+      }
+    }
+
+    @media (max-width: $mobile-width) {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 1.2rem;
+    padding: 2.4rem 0;
+    border-right: none;
+    border-bottom: 1px solid $white-12;
+
+    &:nth-child(2) {
+      border-bottom: none;
+    }
+
+    &:last-child {
+      align-items: flex-start;
+      border-bottom: none;
+    }
+  }
+}
+
+.navGroupContact {
+  display: flex;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.navGroupLabel {
+  margin-bottom: 1rem;
+  color: $white;
+  font-family: 'Neue Regrade';
+  font-size: 1.8rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navLink {
+  color: $white-55;
+  font-family: 'Neue Regrade';
+  font-size: 1.8rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.socialRow {
+  display: flex;
+  gap: 2.4rem;
+  list-style: none;
+}
+
+.socialIcon {
+  display: flex;
+  align-items: center;
+  color: $white-55;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: $white;
+  }
+}
+
+.mobileLegal {
+  display: none;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin: 4rem;
+  padding-top: 3.2rem;
+  border-top: 1px solid $white-12;
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+  }
+}
+
+.legalMobile {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  margin-bottom: 3rem;
+}
+
+.socialRowMobile {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
