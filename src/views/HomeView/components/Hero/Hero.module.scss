@@ -58,3 +58,19 @@
   object-fit: contain;
   flex-shrink: 0;
 }
+
+.imgMobile {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    width: 120%;
+    max-width: none;
+  }
+}
+
+.imgDesktop {
+  @media (max-width: 768px) {
+    display: none;
+  }
+}

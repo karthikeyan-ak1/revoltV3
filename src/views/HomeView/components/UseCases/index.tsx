@@ -1,4 +1,6 @@
-import React from 'react'
+'use client'
+
+import React, { useEffect, useState } from 'react'
 import LogoMarquee from '@/shared/components/LogoMarquee'
 import SectionLabel from '@/shared/components/SectionLabel'
 import { Color } from '@/shared/constants/colors'
@@ -14,6 +16,15 @@ import {
 import styles from './UseCases.module.scss'
 
 export default function UseCases() {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % USE_CASES.length)
+    }, 3000)
+    return () => clearInterval(timer)
+  }, [])
+
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -43,7 +54,40 @@ export default function UseCases() {
         ))}
       </div>
 
-      <LogoMarquee logos={LOGOS} />
+      <div className={styles.carousel}>
+        <div
+          className={styles.carouselTrack}
+          style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+        >
+          {USE_CASES.map(({ titlePrefix, titleEm, titleSuffix, description, bg }) => (
+            <div key={titleEm} className={styles.carouselSlide}>
+              <div
+                className={styles.carouselCard}
+                style={bg ? ({ '--card-bg': `url(${bg})` } as React.CSSProperties) : undefined}
+              >
+                <h3 className={styles.carouselCardTitle}>
+                  {titlePrefix} <span>{titleEm}</span>
+                  <br />
+                  {titleSuffix}
+                </h3>
+                <div className={styles.carouselCardOverlay}>
+                  <p className={styles.cardDescription}>{description}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div className={styles.dots}>
+          {USE_CASES.map((_, i) => (
+            <button
+              key={i}
+              className={`${styles.dot} ${i === activeIndex ? styles.dotActive : ''}`}
+              onClick={() => setActiveIndex(i)}
+              aria-label={`Go to slide ${i + 1}`}
+            />
+          ))}
+        </div>
+      </div>
     </section>
   )
 }

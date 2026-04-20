@@ -13,11 +13,26 @@ interface LogoMarqueeProps {
 
 export default function LogoMarquee({ logos, speed = 24 }: LogoMarqueeProps) {
   return (
-    <div className={styles.wrapper}>
-      <div className={styles.track} style={{ animationDuration: `${speed}s` }}>
-        {[...logos, ...logos].map((logo, i) => (
+    <>
+      <div className={styles.wrapper}>
+        <div className={styles.track} style={{ animationDuration: `${speed}s` }}>
+          {[...logos, ...logos].map((logo, i) => (
+            <Image
+              key={i}
+              src={`/images/${logo.file}.webp`}
+              alt={logo.name}
+              height={28}
+              width={120}
+              className={styles.logo}
+            />
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.staticGrid}>
+        {logos.map((logo) => (
           <Image
-            key={i}
+            key={logo.name}
             src={`/images/${logo.file}.webp`}
             alt={logo.name}
             height={28}
@@ -26,6 +41,6 @@ export default function LogoMarquee({ logos, speed = 24 }: LogoMarqueeProps) {
           />
         ))}
       </div>
-    </div>
+    </>
   )
 }

@@ -141,7 +141,7 @@
 
 @include mobile {
   .section {
-    padding: 6rem 2rem;
+    padding: 3rem 2rem;
   }
 
   .grid {
@@ -157,10 +157,39 @@
   }
 
   .statsColumn {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .statValue {
-    font-size: 4.8rem;
+    font-size: 4rem;
+  }
+  .devImg {
+    transform: none;
+  }
+  .heroCard {
+    width: 100%;
+  }
+  .statLabel {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  .fasterTestingLabel {
+    font-size: 1.2rem;
+    line-height: 18px;
+    max-width: 12rem;
+  }
+
+  .reductionIncidentsLabel {
+    font-size: 1.2rem;
+    line-height: 18px;
+    max-width: 12rem;
+  }
+
+  .lavender,
+  .dark {
+    min-height: 20rem;
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
   }
 }

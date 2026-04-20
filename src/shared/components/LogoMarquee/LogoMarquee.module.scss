@@ -32,3 +32,27 @@
   object-fit: contain;
   flex-shrink: 0;
 }
+
+.staticGrid {
+  display: none;
+}
+
+@include mobile {
+  .wrapper {
+    display: none;
+  }
+
+  .staticGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3.2rem 2rem;
+    width: 100%;
+    place-items: center;
+
+    .logo {
+      width: 100%;
+      max-width: 10rem;
+      height: 2rem;
+    }
+  }
+}
