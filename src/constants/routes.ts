@@ -5,6 +5,7 @@ export enum Routes {
   Pricing = '/pricing',
   Security = '/security',
   Contact = '/contact',
+  CaseStudies = '/case-studies',
   Demo = '/demo',
   Signup = '/signup',
 }

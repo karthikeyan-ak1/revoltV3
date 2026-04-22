@@ -372,7 +372,7 @@ export const PRICING_FAQ_DATA: FaqSectionData = {
   headlineEnd: 'Questions',
   contactLabel: 'Still have questions?',
   contactSubtext: 'Our team can help you!',
-  contactCtaLabel: 'Contact Sales',
+  contactCtaLabel: 'Contact us',
   contactCtaHref: '/contact',
   items: [
     {

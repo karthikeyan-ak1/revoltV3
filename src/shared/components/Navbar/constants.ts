@@ -8,6 +8,7 @@ export const GET_STARTED_LABEL = 'Get Started'
 export const NAV_LINKS = [
   { label: 'Product', mobileLabel: 'Home', href: Routes.Product },
   { label: 'Use Cases', href: Routes.UseCases },
+  { label: 'Case Studies', href: Routes.CaseStudies },
   { label: 'Pricing', href: Routes.Pricing },
   { label: 'Security', href: Routes.Security },
   { label: 'Contact', href: Routes.Contact },

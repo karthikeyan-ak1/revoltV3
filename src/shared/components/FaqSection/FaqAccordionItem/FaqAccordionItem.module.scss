@@ -33,6 +33,7 @@
   line-height: 1.4;
   transition: opacity 0.2s ease;
   text-align: left;
+  color: $black;
 
   .trigger:hover & {
     opacity: 0.7;
