@@ -1,0 +1,393 @@
+@use '../../../../styles/variables' as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12rem 8rem 8rem;
+  background-color: $cream-250;
+  gap: 8rem;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column-reverse;
+    padding: 0;
+    gap: 0;
+    align-items: stretch;
+  }
+}
+
+.infoCol {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @media (max-width: $mobile-width) {
+    padding: 3rem 2rem 4rem;
+    gap: 2.5rem;
+    background-color: $cream-light;
+  }
+}
+
+.infoTop {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 5rem;
+
+  @media (max-width: $mobile-width) {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.headline {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 3rem;
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Hedvig Letters Serif';
+  }
+}
+
+.description {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  max-width: 70%;
+
+  @media (max-width: $mobile-width) {
+    max-width: 80%;
+  }
+}
+
+.divider {
+  border: none;
+  border-top: 0.5px solid $graphite-500;
+  margin: 2rem 0;
+  max-width: 80%;
+}
+
+.issueHeading {
+  color: $black;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 1.6rem;
+  line-height: 1.7rem;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Open Sauce Sans';
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+}
+
+.issueText {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  max-width: 90%;
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Neue Regrade';
+    font-weight: 500;
+  }
+}
+
+.issueEmail {
+  font-weight: 600;
+
+  @media (max-width: $mobile-width) {
+    font-weight: 700;
+  }
+}
+
+.communityCard {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 3rem;
+  border: 1px solid $black-8;
+  background-color: $black-4;
+  width: 44.7rem;
+  height: 16.2rem;
+
+  @media (max-width: $mobile-width) {
+    width: 34.2rem;
+    height: 20.3rem;
+    background-color: $cream-200;
+    align-self: center;
+  }
+}
+
+.communityTitle {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Hedvig Letters Serif';
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.communityDescription {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Neue Regrade';
+    font-size: 1.2rem;
+    line-height: 1.7rem;
+  }
+}
+
+.communityLinks {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.communityLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-left: 1rem;
+  }
+}
+
+.contactEmail {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  font-weight: 500;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-family: 'Hedvig Letters Serif';
+    font-size: 2rem;
+    line-height: 3rem;
+  }
+}
+
+.socialLinks {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.socialIcon {
+  filter: brightness(0);
+}
+
+.formCard {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  padding: 4rem;
+  background-color: $black-90;
+  border-radius: 8px;
+  height: 63.2rem;
+  min-width: 75.7rem;
+
+  @media (max-width: $mobile-width) {
+    border-radius: 0;
+    padding: 8rem 2rem 3rem;
+    background-color: transparent;
+    min-width: fit-content;
+    align-items: center;
+  }
+}
+
+.formHeading {
+  color: $white;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 2.6rem;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width) {
+    color: $black;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    width: 30rem;
+    text-align: center;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+
+  @media (max-width: $mobile-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label {
+  color: $white;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.4rem;
+  font-weight: 400;
+
+  @media (max-width: $mobile-width) {
+    color: $black;
+  }
+}
+
+.input {
+  width: 100%;
+  padding: 1.4rem 1.6rem;
+  background-color: $black-85;
+  border-radius: 6px;
+  border: none;
+  color: $white;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.4rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+
+  &::placeholder {
+    color: $white-60;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-color: $black-5;
+    color: $black;
+
+    &::placeholder {
+      color: $black50;
+    }
+  }
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 14rem;
+  line-height: 2.2rem;
+
+  @media (max-width: $mobile-width) {
+    height: 12rem;
+  }
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  cursor: pointer;
+}
+
+.checkbox {
+  flex-shrink: 0;
+  width: 1.6rem;
+  height: 1.6rem;
+  margin-top: 0.2rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: $white-5;
+  border: 1.5px solid $white-24;
+  border-radius: 3px;
+  transition: background-color 0.15s ease;
+
+  &:checked {
+    background-color: $white;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 10'%3E%3Cpath d='M1 5l3.5 3.5L11 1' stroke='%23000' stroke-width='1.8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65%;
+    border-color: $white;
+  }
+
+  @media (max-width: $mobile-width) {
+    background-color: $black-5;
+    border-color: $black20;
+  }
+}
+
+.checkboxText {
+  color: $white;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.4rem;
+  line-height: 2rem;
+  letter-spacing: -4%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1rem;
+    color: $black;
+    line-height: 1;
+  }
+}
+
+.privacyLink {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  color: $white;
+
+  @media (max-width: $mobile-width) {
+    color: $black;
+  }
+}
+
+.submitBtn {
+  align-self: flex-start;
+  padding: 1.2rem 4rem !important;
+
+  @media (max-width: $mobile-width) {
+    color: $white !important;
+    background-color: $black !important;
+    align-self: auto;
+  }
+}

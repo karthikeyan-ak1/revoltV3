@@ -1,0 +1,303 @@
+@use '../../../../styles/variables' as *;
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  padding: 8rem 8rem 30rem;
+  background-color: $cream-light;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    padding: 4rem 2.4rem 6rem;
+  }
+}
+
+.leftCol {
+  display: flex;
+  flex-direction: column;
+  width: 83.1rem;
+  @media (max-width: $mobile-width) {
+    width: 100%;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 4rem 0;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  & + & {
+    border-top: 0.5px solid $graphite-500;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 2rem 0;
+    gap: 1rem;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+}
+
+.sectionHeading {
+  color: $black;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 3.6rem;
+  font-weight: 400;
+  line-height: 4.8rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2.8rem;
+    line-height: 5.7rem;
+  }
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.paragraph {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  white-space: pre-line;
+  margin-bottom: 2rem;
+  width: 75%;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    width: 100%;
+  }
+}
+
+.label {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  margin-bottom: 0rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.4rem;
+  }
+}
+
+.subheading {
+  margin-top: 1.2rem;
+  color: $black;
+  font-family: 'Neue Regrade';
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 3.5rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 2rem;
+    font-family: 'Poppins';
+    font-weight: 500;
+    line-height: 2.4rem;
+  }
+}
+
+.blockquote {
+  border-left: 2px solid $black;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  color: $black;
+  font-family: 'Neue Regrade';
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2rem;
+    line-height: 2.8rem;
+  }
+}
+
+.bulletList {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 2rem;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+  }
+}
+
+.bulletItem {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 4.4rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+  }
+}
+
+.bulletIcon {
+  flex-shrink: 0;
+  filter: brightness(0);
+}
+
+.featureList {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.featureTitle {
+  color: $black;
+  font-family: 'Neue Regrade';
+  font-size: 3rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin-top: 2rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2rem;
+    font-family: 'Poppins';
+    line-height: 2.4rem;
+  }
+}
+
+.featureDescription {
+  font-family: 'Open Sauce Sans';
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 1.4rem;
+    line-height: 2rem;
+  }
+}
+
+.imageBlock {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contentImageDesktop {
+  display: block;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.contentImageMobile {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+  }
+}
+
+.rightCol {
+  position: sticky;
+  top: 5rem;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  background-color: $cream-400;
+  padding: 2.5rem 3rem;
+  border-radius: 16px;
+  width: 40rem;
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardIcon {
+  flex-shrink: 0;
+  filter: brightness(0);
+}
+
+.cardTitle {
+  color: $black;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 4.8rem;
+}
+
+.cardDescription {
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.cardBulletList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0 2rem;
+}
+
+.cardBulletItem {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: $black;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+.cardBulletDot {
+  flex-shrink: 0;
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background-color: $black;
+}
+
+.cardDivider {
+  border: none;
+  border-top: 0.5px solid $graphite-500;
+  margin: 4rem 0 3rem;
+}

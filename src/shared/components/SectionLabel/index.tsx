@@ -3,18 +3,20 @@ import styles from './SectionLabel.module.scss'
 
 interface SectionLabelProps {
   label: string
-  dotColor: string
+  hasDot?: boolean
+  dotColor?: string
   labelColor?: Color
 }
 
 export default function SectionLabel({
   label,
+  hasDot = true,
   dotColor,
   labelColor = Color.WHITE_60,
 }: SectionLabelProps) {
   return (
     <p className={styles.label} style={{ color: labelColor }}>
-      <span className={styles.dot} style={{ backgroundColor: dotColor }} />
+      {hasDot && <span className={styles.dot} style={{ backgroundColor: dotColor }} />}
       <span>{label}</span>
     </p>
   )

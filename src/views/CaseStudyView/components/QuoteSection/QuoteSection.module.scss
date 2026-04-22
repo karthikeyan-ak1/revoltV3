@@ -1,0 +1,79 @@
+@use '../../../../styles/variables' as *;
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 8rem 10rem;
+  background-color: $cream-light;
+  text-align: center;
+
+  @media (max-width: $mobile-width) {
+    padding: 6rem 2.8rem;
+  }
+}
+
+.marqueeWrapper {
+  width: 100%;
+  margin: 6rem 0 15rem 0;
+}
+
+.quote {
+  max-width: 98.5rem;
+  margin-bottom: 5rem;
+  color: $black;
+  font-family: 'Hedvig Letters Serif';
+  font-size: 3.2rem;
+  font-weight: 400;
+  line-height: 4.4rem;
+
+  @media (max-width: $mobile-width) {
+    font-size: 2.4rem;
+    line-height: 3.9rem;
+    margin-bottom: 5rem;
+  }
+}
+
+.author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.avatar {
+  position: relative;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $cream-200;
+}
+
+.avatarImage {
+  object-fit: cover;
+  object-position: center top;
+  filter: grayscale(100%);
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.authorName {
+  color: $black;
+  font-family: 'Neue Regrade';
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4rem;
+}
+
+.authorRole {
+  color: $black60;
+  font-family: 'Open Sauce Sans';
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 2rem;
+}

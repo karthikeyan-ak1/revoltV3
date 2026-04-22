@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import Link from 'next/link'
 import LogoMarquee from '@/shared/components/LogoMarquee'
 import { LOGOS } from '@/shared/constants/logos'
@@ -30,6 +30,24 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ data }) => {
   } = data
 
   const [activeIndex, setActiveIndex] = useState(0)
+  const [sectionLoaded, setSectionLoaded] = useState(false)
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const el = sectionRef.current
+    if (!el) return
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setSectionLoaded(true)
+          observer.disconnect()
+        }
+      },
+      { threshold: 0.3 },
+    )
+    observer.observe(el)
+    return () => observer.disconnect()
+  }, [])
 
   const goToNext = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % personas.length)
@@ -41,7 +59,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ data }) => {
   }, [goToNext, autoPlayInterval])
 
   return (
-    <section className={styles.persona}>
+    <section ref={sectionRef} className={styles.persona}>
       <LogoMarquee logos={LOGOS} />
 
       <div className={styles.content}>
@@ -65,6 +83,7 @@ const PersonaSection: React.FC<PersonaSectionProps> = ({ data }) => {
                 persona={persona}
                 isActive={i === activeIndex}
                 index={i}
+                sectionLoaded={sectionLoaded}
               />
             ))}
           </div>

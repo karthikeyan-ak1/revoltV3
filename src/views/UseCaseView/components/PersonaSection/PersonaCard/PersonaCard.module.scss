@@ -1,10 +1,11 @@
 @use '../../../../../styles/variables' as *;
+@use '../../../../../styles/animations' as *;
 
 .card {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 0.7s ease;
+  transition: opacity 0.5s ease;
   pointer-events: none;
 
   &.active {
@@ -59,11 +60,42 @@
   }
 }
 
+.smiley {
+  position: absolute;
+  top: 0;
+  right: 12%;
+  opacity: 0;
+  transform: translateY(2.4rem);
+
+  .animateIn & {
+    animation: slideUp 0.55s ease forwards;
+    animation-delay: 0.1s;
+  }
+
+  .noAnimate & {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .rolePill {
   position: absolute;
   top: 22rem;
   left: 1rem;
   z-index: 0;
+  opacity: 0;
+  transform: translateY(2.4rem);
+
+  .animateIn & {
+    animation: slideUp 0.55s ease forwards;
+    animation-delay: 0.22s;
+  }
+
+  .noAnimate & {
+    opacity: 1;
+    transform: none;
+  }
+
   width: fit-content;
   padding: 1.6rem 1rem;
   border-radius: 7.68px;
@@ -89,6 +121,18 @@
   width: 33.8rem;
   padding: 2.5rem;
   border-radius: 15.36px;
+  opacity: 0;
+  transform: translateY(2.4rem);
+
+  .animateIn & {
+    animation: slideUp 0.55s ease forwards;
+    animation-delay: 0.38s;
+  }
+
+  .noAnimate & {
+    opacity: 1;
+    transform: none;
+  }
 
   @media (max-width: $mobile-width) {
     bottom: 3.5rem;
